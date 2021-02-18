@@ -20,6 +20,7 @@ import Outcome from './Outcome';
 import { useTranslation } from './translate';
 import { CallResult } from './types';
 
+// make type singular so that you can reuse it with []
 type Options = { key: string, text: React.ReactNode, value: number }[];
 
 function getCallMessageOptions (callContract: Contract | null): Options {
@@ -30,6 +31,7 @@ function getCallMessageOptions (callContract: Contract | null): Options {
         text: (
           <MessageSignature
             message={message}
+            //what's contract registry
             registry={callContract.registry}
           />
         ),

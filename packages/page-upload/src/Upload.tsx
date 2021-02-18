@@ -45,10 +45,11 @@ function Upload ({ basePath, navigateTo }: Props): React.ReactElement<Props> {
       if (currentName.current === '') {
         setName(`${abi.project.contract.name.toString()}.contract`);
       }
-
+      // why return?
       return;
     }
 
+    // why 3 ways to check this
     if (wasmFromFile && isWasmFromFileSupplied && isWasmFromFileValid) {
       setWasm(
         [compactAddLength(wasmFromFile.data), true]

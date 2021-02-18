@@ -22,6 +22,7 @@ function AccountIndex ({ children, className = '', defaultValue, label, value }:
   const [accountIndex, setAccountIndex] = useState<string | null>(null);
 
   useEffect((): void => {
+    // this is not on the info type
     const { accountIndex } = info || {};
 
     if (accountIndex) {

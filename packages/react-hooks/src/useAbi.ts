@@ -38,6 +38,7 @@ export default function useAbi (source: Code | null = null, isRequired = false):
   const { api } = useApi();
   const { t } = useTranslation();
   const initialState: State = source
+  // this is so hard to understand
     ? [source.abi ? new Abi(source.abi, api.registry.getChainProperties()) : null, !!source?.abi, !isRequired || !!source.abi]
     : [null, false, false];
   const [[abi, isAbiSupplied, isAbiValid], setAbi] = useState<State>(initialState);

@@ -9,8 +9,10 @@ import { AnyJson } from '@polkadot/types/types';
 
 export interface AppNavigation {
   deploy: VoidFn;
+  // i really don't get this nav
   deployNew: (_: string, __?: number) => VoidFn;
   deploySuccess: (_: string) => VoidFn;
+
   execute: VoidFn;
   executeAdd: VoidFn;
   executeCall: (_: string, __?: number) => VoidFn;

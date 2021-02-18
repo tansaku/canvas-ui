@@ -7,7 +7,7 @@ import { BareProps } from '@canvas-ui/react-components/types';
 export interface RouteProps extends AppProps, BareProps {
   location: any;
 }
-
+// i don't get the nav
 export interface Route {
   Component: React.ComponentType<RouteProps>;
   Modal?: React.ComponentType<any>;

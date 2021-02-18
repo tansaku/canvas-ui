@@ -39,6 +39,7 @@ interface Props extends BareProps {
  * ```
  */
 function Editor ({ className = '', code, isValid, onEdit }: Props): React.ReactElement<Props> {
+  // why use state if you never change it?
   const [editorId] = useState(`flask-${Date.now()}`);
   const editorRef = useRef<CodeFlask | null>(null);
 

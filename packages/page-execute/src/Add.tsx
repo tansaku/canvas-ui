@@ -38,6 +38,7 @@ function Add ({ className, isContract, navigateTo }: Props): React.ReactElement<
   }, [address, isContract]);
 
   useEffect((): void => {
+    // not safe
     setIsStored(!!contractInfo?.isSome);
   }, [contractInfo?.isSome]);
 
@@ -49,6 +50,7 @@ function Add ({ className, isContract, navigateTo }: Props): React.ReactElement<
 
       if (isAddressTouched) {
         if (!isAddress) {
+          // it's inferred
           status = t<string>('The value is not in a valid address format');
         } else if (!isStored) {
           status = t<string>('Unable to find deployed contract code at the specified address');

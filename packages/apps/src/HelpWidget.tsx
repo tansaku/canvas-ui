@@ -13,6 +13,7 @@ const HelpWidget = ({ className }: Props) => {
   const [visible, setVisible] = useState(false);
 
   const handleClick = () => {
+    // setVisible(!visible);
     !visible ? setVisible(true) : setVisible(false);
   };
 
